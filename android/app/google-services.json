@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "685747776069",
+    "project_id": "farmers-bbfed",
+    "storage_bucket": "farmers-bbfed.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:685747776069:android:2f970e95acf720ff54512c",
+        "android_client_info": {
+          "package_name": "com.example.agricultural_society_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "685747776069-2ak7lkhauhf3cmsmkdkrmt47ee1fe1jb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.agricultural_society_app",
+            "certificate_hash": "4a8840f5dd66e05193c78df7d016ac156a7897f8"
+          }
+        },
+        {
+          "client_id": "685747776069-9m9mq0i62p409km6c2sea1akm9tuqjc5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCc1ZS3GGqJo7WTG-M-W_0-S0UYBPKdWP8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "685747776069-9m9mq0i62p409km6c2sea1akm9tuqjc5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
