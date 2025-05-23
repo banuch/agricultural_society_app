@@ -1,5 +1,5 @@
 import 'package:agricultural_society_app/providers/launage_providers.dart';
-import 'package:agricultural_society_app/screens/home/home_)screen.dart';
+import 'package:agricultural_society_app/screens/home/home_screen.dart';
 import 'package:agricultural_society_app/screens/profile/profile_sreen.dart';
 import 'package:agricultural_society_app/utils/app_localization.dart';
 import 'package:flutter/material.dart';

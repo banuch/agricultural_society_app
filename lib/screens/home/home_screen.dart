@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../providers/launage_providers.dart';
+import '../../providers/product_provider.dart';
 import '../../services/auth_service.dart';
 import '../../providers/user_provider.dart';
 import '../../utils/app_localization.dart';
@@ -47,6 +48,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     ));
 
     _animationController.forward();
+
+    // Load initial product data
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      context.read<ProductProvider>().loadAllProducts(limit: 6);
+    });
   }
 
   @override
@@ -68,13 +74,15 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // _buildWelcomeCard(user, localizations),
+                _buildWelcomeCard(user, localizations),
                 const SizedBox(height: 24),
                 _buildProfileStatusCard(user, localizations),
-                // const SizedBox(height: 24),
-                // _buildQuickActionsSection(localizations),
-                // const SizedBox(height: 24),
-                // _buildFeaturesGrid(localizations),
+                const SizedBox(height: 24),
+                _buildQuickActionsSection(localizations),
+                const SizedBox(height: 24),
+                // _buildRecentProductsSection(localizations),
+                const SizedBox(height: 24),
+                _buildFeaturesGrid(localizations),
               ],
             ),
           ),
@@ -398,7 +406,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               icon: Icons.shopping_cart,
               title: localizations.marketplace,
               subtitle: 'Buy & Sell Products',
-              onTap: () => _showComingSoonDialog(),
+              onTap: () => Navigator.pushNamed(context, '/products'),
               color: Colors.green,
             ),
             _buildFeatureCard(
